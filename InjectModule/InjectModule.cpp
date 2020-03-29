@@ -34,6 +34,7 @@ OriCreateProcess _createProcess = NULL;
    
 wchar_t* _launcherPath;
 
+//Hook?建新?程的函数,用于在已附加DebugTools的?程??新?程?自?附加本工具
 BOOL WINAPI MyCreateProcessW(   
                        LPCTSTR lpApplicationName,   
                        LPTSTR lpCommandLine,   
@@ -48,10 +49,10 @@ BOOL WINAPI MyCreateProcessW(
                        )   
 {   
 	TCHAR message[200];
-	_stprintf_s(message,L"%sをDebugToolsで起動しますか？",lpApplicationName);
+	_stprintf_s(message,L"是否自?附加DebugTools到%s?",lpApplicationName);
 	
 	
-    int iret = MessageBox(NULL,message,L"確認",MB_OKCANCEL);   
+    int iret = MessageBox(NULL,message,L"??",MB_OKCANCEL);   
 	WriteProcessMemory((void*)-1, _createProcess, szOldMyCreateProcess, 5, NULL); 
 
     if(iret == IDOK)   

@@ -12,30 +12,15 @@ namespace DebugTools {
 	using namespace System::Drawing;
 	using namespace System::Diagnostics;
 
-	/// <summary>
-	/// Form1 偺奣梫
-	///
-	/// 寈崘: 偙偺僋儔僗偺柤慜傪曄峏偡傞応崌丄偙偺僋儔僗偑埶懚偡傞偡傋偰偺 .resx 僼傽僀儖偵娭楢晅偗傜傟偨
-	///          儅僱乕僕 儕僜乕僗 僐儞僷僀儔 僣乕儖偵懳偟偰 'Resource File Name' 僾儘僷僥傿傪
-	///          曄峏偡傞昁梫偑偁傝傑偡丅偙偺曄峏傪峴傢側偄偲丄
-	///          僨僓僀僫偲丄偙偺僼僅乕儉偵娭楢晅偗傜傟偨儘乕僇儔僀僘嵪傒儕僜乕僗偲偑丄
-	///          惓偟偔憡屳偵棙梡偱偒側偔側傝傑偡丅
-	/// </summary>
 	public ref class TargetSelectFrm : public System::Windows::Forms::Form
 	{
 	public:
 		TargetSelectFrm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: 偙偙偵僐儞僗僩儔僋僞 僐乕僪傪捛壛偟傑偡
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// 巊梡拞偺儕僜乕僗傪偡傋偰僋儕乕儞傾僢僾偟傑偡丅
-		/// </summary>
 		~TargetSelectFrm()
 		{
 			if (components)
@@ -66,16 +51,10 @@ namespace DebugTools {
 
 
 	private:
-		/// <summary>
-		/// 昁梫側僨僓僀僫曄悢偱偡丅
-		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// 僨僓僀僫 僒億乕僩偵昁梫側儊僜僢僪偱偡丅偙偺儊僜僢僪偺撪梕傪
-		/// 僐乕僪 僄僨傿僞偱曄峏偟側偄偱偔偩偝偄丅
-		/// </summary>
+
 		void InitializeComponent(void)
 		{
 			this->btnRef = (gcnew System::Windows::Forms::Button());
@@ -95,7 +74,7 @@ namespace DebugTools {
 			this->btnRef->Name = L"btnRef";
 			this->btnRef->Size = System::Drawing::Size(103, 32);
 			this->btnRef->TabIndex = 1;
-			this->btnRef->Text = L"嵞扵嶕";
+			this->btnRef->Text = L"刷新";
 			this->btnRef->UseVisualStyleBackColor = true;
 			this->btnRef->Click += gcnew System::EventHandler(this, &TargetSelectFrm::btnRef_Click);
 			// 
@@ -106,27 +85,29 @@ namespace DebugTools {
 			this->btnAttach->Name = L"btnAttach";
 			this->btnAttach->Size = System::Drawing::Size(103, 31);
 			this->btnAttach->TabIndex = 2;
-			this->btnAttach->Text = L"傾僞僢僠";
+			this->btnAttach->Text = L"附加到进程";
 			this->btnAttach->UseVisualStyleBackColor = true;
 			this->btnAttach->Click += gcnew System::EventHandler(this, &TargetSelectFrm::btnAttach_Click);
 			// 
 			// txtFilter
 			// 
-			this->txtFilter->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left) 
+			this->txtFilter->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->txtFilter->Location = System::Drawing::Point(12, 16);
 			this->txtFilter->Name = L"txtFilter";
-			this->txtFilter->Size = System::Drawing::Size(635, 19);
+			this->txtFilter->Size = System::Drawing::Size(635, 21);
 			this->txtFilter->TabIndex = 4;
 			this->txtFilter->TextChanged += gcnew System::EventHandler(this, &TargetSelectFrm::txtFilter_TextChanged);
 			// 
 			// lvProcess
 			// 
-			this->lvProcess->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom) 
-				| System::Windows::Forms::AnchorStyles::Left) 
+			this->lvProcess->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->lvProcess->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(3) {this->id, this->title, 
-				this->mainWindowTitle});
+			this->lvProcess->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(3) {
+				this->id, this->title,
+					this->mainWindowTitle
+			});
 			this->lvProcess->FullRowSelect = true;
 			this->lvProcess->Location = System::Drawing::Point(12, 41);
 			this->lvProcess->Name = L"lvProcess";
@@ -141,19 +122,19 @@ namespace DebugTools {
 			// 
 			// title
 			// 
-			this->title->Text = L"僾儘僙僗柤";
+			this->title->Text = L"标题";
 			this->title->Width = 265;
 			// 
 			// mainWindowTitle
 			// 
-			this->mainWindowTitle->Text = L"儊僀儞 僂傿儞僪僂偺僞僀僩儖";
+			this->mainWindowTitle->Text = L"AAAA";
 			this->mainWindowTitle->Width = 305;
 			// 
 			// label1
 			// 
 			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(128)));
 			this->label1->ForeColor = System::Drawing::SystemColors::HotTrack;
 			this->label1->Location = System::Drawing::Point(675, 309);
@@ -173,7 +154,7 @@ namespace DebugTools {
 			this->Controls->Add(this->btnAttach);
 			this->Controls->Add(this->btnRef);
 			this->Name = L"TargetSelectFrm";
-			this->Text = L"栚昗慖戰 - 3.0";
+			this->Text = L"DebugTools- 3.0";
 			this->Load += gcnew System::EventHandler(this, &TargetSelectFrm::Form1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

@@ -22,6 +22,7 @@ public partial class Application
 {
     public Application()
     {
+        new MainApplication();
     }
 
     public static int GetPackageVersionNo()
@@ -40,7 +41,7 @@ public partial class Application
             string path = e.Args.First();
             if (!File.Exists(path))
             {
-                MessageBox.Show("指定のファイルは存在しません");
+                MessageBox.Show("指定的文件找不到");
                 return;
             }
             IDataAccessor accessor = AccessorCenter.Instance.CreateAccessor(path);

@@ -30,9 +30,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.DBSupport", "Plugin\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.DBSupport.Oracle", "Plugin\Common\Common.DBSupport.Oracle\Common.DBSupport.Oracle.csproj", "{EE214B55-8AD7-421E-A6C6-95123CF6ED01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.DBSupport.MySQL", "Common.DBSupport.MySQL\Common.DBSupport.MySQL.csproj", "{3230B833-3550-4A67-B420-C86C52CE7576}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.DBSupport.MySQL", "Plugin\Common\Common.DBSupport.MySQL\Common.DBSupport.MySQL.csproj", "{3230B833-3550-4A67-B420-C86C52CE7576}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.DBSupport.SQLServer", "Common.DBSupport.SQLServer\Common.DBSupport.SQLServer.csproj", "{CDEA231D-8DE9-4FF0-AC13-7C6D32A80528}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.DBSupport.SQLServer", "Plugin\Common\Common.DBSupport.SQLServer\Common.DBSupport.SQLServer.csproj", "{CDEA231D-8DE9-4FF0-AC13-7C6D32A80528}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

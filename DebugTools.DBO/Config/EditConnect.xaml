@@ -8,10 +8,7 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="84,50,0,0" Name="txtDBName" VerticalAlignment="Top" Width="294" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="84,90,0,0" Name="txtUsername" VerticalAlignment="Top" Width="156" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="84,130,0,0" Name="txtPassword" VerticalAlignment="Top" Width="156" />
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="84,170,0,0" Name="cmbDBType" VerticalAlignment="Top" Width="156" >
-            <ComboBoxItem Content="SQLServer"/>
-            <ComboBoxItem Content="Oracle"/>
-            <ComboBoxItem Content="MySQL"/> 
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="84,170,0,0" Name="cmbDBType" VerticalAlignment="Top" Width="156" > 
         </ComboBox>
         <Label Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="TextBlock1" Content="服务器：" VerticalAlignment="Top" />
         <Label Height="23" HorizontalAlignment="Left" Margin="12,50,0,0" Name="TextBlock2" Content="DB名：" VerticalAlignment="Top" />

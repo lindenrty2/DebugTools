@@ -1,4 +1,5 @@
 ﻿using DebugTools.DataBase;
+using System.Windows.Controls;
 
 namespace DebugTools.DBO
 {
@@ -16,6 +17,7 @@ namespace DebugTools.DBO
         public EditConnect()
         {
             InitializeComponent();
+            cmbDBType.ItemsSource = new string[] { "MySQL", "SqlServer" };
             this.btnSave.Click += btnSave_Click;
             this.btnCancel.Click += btnCancel_Click;
         }
