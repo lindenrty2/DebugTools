@@ -37,7 +37,7 @@ namespace DebugTools {
 	private: System::Windows::Forms::ListView^  lvProcess;
 	private: System::Windows::Forms::ColumnHeader^  id;
 	private: System::Windows::Forms::ColumnHeader^  title;
-	private: System::Windows::Forms::Label^  label1;
+
 	private: System::Windows::Forms::ColumnHeader^  mainWindowTitle;
 
 
@@ -64,7 +64,6 @@ namespace DebugTools {
 			this->id = (gcnew System::Windows::Forms::ColumnHeader());
 			this->title = (gcnew System::Windows::Forms::ColumnHeader());
 			this->mainWindowTitle = (gcnew System::Windows::Forms::ColumnHeader());
-			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// btnRef
@@ -122,39 +121,25 @@ namespace DebugTools {
 			// 
 			// title
 			// 
-			this->title->Text = L"标题";
+			this->title->Text = L"进程名";
 			this->title->Width = 265;
 			// 
 			// mainWindowTitle
 			// 
-			this->mainWindowTitle->Text = L"AAAA";
+			this->mainWindowTitle->Text = L"窗口标题";
 			this->mainWindowTitle->Width = 305;
-			// 
-			// label1
-			// 
-			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(128)));
-			this->label1->ForeColor = System::Drawing::SystemColors::HotTrack;
-			this->label1->Location = System::Drawing::Point(675, 309);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(39, 24);
-			this->label1->TabIndex = 6;
-			this->label1->Text = L"3.0";
 			// 
 			// TargetSelectFrm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(769, 345);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->lvProcess);
 			this->Controls->Add(this->txtFilter);
 			this->Controls->Add(this->btnAttach);
 			this->Controls->Add(this->btnRef);
 			this->Name = L"TargetSelectFrm";
-			this->Text = L"DebugTools- 3.0";
+			this->Text = L"DebugTools- v0.1";
 			this->Load += gcnew System::EventHandler(this, &TargetSelectFrm::Form1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

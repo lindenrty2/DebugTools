@@ -1,4 +1,3 @@
-// 偙傟偼 儊僀儞 DLL 僼傽僀儖偱偡丅
 
 #include "stdafx.h"
 
@@ -34,7 +33,7 @@ OriCreateProcess _createProcess = NULL;
    
 wchar_t* _launcherPath;
 
-//Hook?寶怴?掱揑敓悢,梡槹嵼涍晬壛DebugTools揑?掱??怴?掱?帺?晬壛杮岺嬶
+//Hook进程启动函数,用于在附加DebugTools的进程启动新进程时自动附加本工具
 BOOL WINAPI MyCreateProcessW(   
                        LPCTSTR lpApplicationName,   
                        LPTSTR lpCommandLine,   
@@ -49,7 +48,7 @@ BOOL WINAPI MyCreateProcessW(
                        )   
 {   
 	TCHAR message[200];
-	_stprintf_s(message,L"惀斲帺?晬壛DebugTools摓%s?",lpApplicationName);
+	_stprintf_s(message,L"是否对%s适用DebugTools?",lpApplicationName);
 	
 	
     int iret = MessageBox(NULL,message,L"??",MB_OKCANCEL);   
