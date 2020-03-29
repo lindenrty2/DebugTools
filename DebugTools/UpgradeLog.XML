@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DebugTools">
+</Property><Property Name="ソリューション ファイル" Value="C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\DebugTools.sln">
+</Property><Property Name="Date" Value="2011年8月22日">
+</Property><Property Name="Time" Value="19:40:40">
+</Property></Properties><Event ErrorLevel="0" Project="InjectModule" Source="..\InjectModule\InjectModule.vcproj" Description="Converting project file 'C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\InjectModule\InjectModule.vcproj'.">
+</Event><Event ErrorLevel="1" Project="InjectModule" Source="..\InjectModule\InjectModule.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="InjectModule" Source="..\InjectModule\InjectModule.vcproj" Description="Attribute 'CopyLocalDependencies' of 'AssemblyReference' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="InjectModule" Source="..\InjectModule\InjectModule.vcproj" Description="Attribute 'UseDependenciesInBuild' of 'AssemblyReference' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="InjectModule" Source="..\InjectModule\InjectModule.vcproj" Description="Done converting to new project file 'C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\InjectModule\InjectModule.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="InjectModule" Source="..\InjectModule\InjectModule.vcproj" Description="Converted">
+</Event></UpgradeLog>

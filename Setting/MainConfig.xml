@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<configuration>
+  <BaseSetting>
+    <MainAppDirectory>D:\DEV\wh-ling\Marooon\dev\R2\R2Devs\CheckPoint0046\Development\src</MainAppDirectory>
+  </BaseSetting>
+  <MarooonConnectionSetting>
+    <ConnectionItem IsDisplay="1" Key="Main" ServiceName="Data Source=AcceptanceDB;Initial Catalog=DevelopMarooon_Path_20121112;User ID=marooon;Password=marooon" />
+  </MarooonConnectionSetting>
+</configuration>

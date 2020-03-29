@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DebugTools">
+</Property><Property Name="ソリューション ファイル" Value="C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\DebugTools.sln">
+</Property><Property Name="Date" Value="2011年8月22日">
+</Property><Property Name="Time" Value="19:43:27">
+</Property><Property Name="ログ番号" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\DebugModule.csproj" Description="プロジェクト ファイルは正常に C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\Backup\DebugModule.csproj としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\MainModule.cs" Description="ファイルは正常に C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\Backup\MainModule.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\ObjectViewer.cs" Description="ファイルは正常に C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\Backup\ObjectViewer.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\ObjectViewer.Designer.cs" Description="ファイルは正常に C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\Backup\ObjectViewer.Designer.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\Properties\AssemblyInfo.cs" Description="ファイルは正常に C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\Backup\Properties\AssemblyInfo.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\Window1.xaml.cs" Description="ファイルは正常に C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\Backup\Window1.xaml.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\app.config" Description="ファイルは正常に C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\Backup\app.config としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\ObjectViewer.resx" Description="ファイルは正常に C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\Backup\ObjectViewer.resx としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\Window1.xaml" Description="ファイルは正常に C:\Users\wh-ling\Documents\Visual Studio 2008\Projects\MarooonTools\DebugTools\Backup\Window1.xaml としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\DebugModule.csproj" Description="プロジェクトは正常に変換されました。">
+</Event><Event ErrorLevel="3" Project="DebugModule" Source="..\DebugModule\DebugModule.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DebugModule" Source="..\DebugModule\app.config" Description="ファイルは正常に変換されました。All &lt;supportedRuntime&gt;と &lt;requiredRuntime&gt; は、プロジェクトをビルドして Visual Studio 2005 で実行できるように削除されました。">
+</Event><Event ErrorLevel="3" Project="DebugModule" Source="..\DebugModule\app.config" Description="Converted">
+</Event></UpgradeLog>

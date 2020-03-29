@@ -1,0 +1,46 @@
+﻿<Window x:Class="DebugTools.DBO.DataPackageCreateOptionWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="パッケージ出力設定" Height="577" Width="655">
+    <Grid>
+        <GroupBox Header="セキュリティオプション" Height="193" Margin="10,10,10,0" Name="GroupBox1" VerticalAlignment="Top" >
+            <Grid>
+                <RadioButton Content="個別セキュリティ設定を使用する" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="10,10,0,0" Name="ctlSecuritySetting" VerticalAlignment="Top" />
+                <RadioButton Height="Auto" HorizontalAlignment="Left" Margin="10,33,0,0" Name="ctlUseSecurityLevel3" VerticalAlignment="Top">
+                    <TextBlock Text="セキュリティLevel3（完全隠す）を強制適用する" TextWrapping="Wrap" />
+                </RadioButton>
+                <RadioButton Content="セキュリティ設定を使用しない" Height="16" HorizontalAlignment="Left" Margin="10,58,0,0" Name="ctlNotUseSecurity" VerticalAlignment="Top" />
+                <Button Content="?" Height="23" HorizontalAlignment="Right" Margin="0,10,10,0" Name="ctlSecretHelp" VerticalAlignment="Top" Width="34" />
+                <Label Content="セキュリティLevel1(暗号化)のパスワード：" Height="28" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" />
+                <Label Content="パスワード：" Height="28" HorizontalAlignment="Left" Margin="25,102,0,0" VerticalAlignment="Top" />
+                <PasswordBox Height="23" Margin="140,105,50,0" Name="ctlSecretPassword" VerticalAlignment="Top" />
+                <Label Content="パスワード再入力：" Height="28" HorizontalAlignment="Left" Margin="25,128,0,0" Name="Label1" VerticalAlignment="Top" />
+                <PasswordBox Height="23" Margin="140,130,50,0" Name="ctlSecretPasswordConfirm" VerticalAlignment="Top" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="出力オプション" Height="193" Margin="10,209,10,0" Name="GroupBox2" VerticalAlignment="Top" >
+            <Grid>
+                <CheckBox Content="関連データを出力する(" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="10,10,0,0" Name="ctlIsOutputRelationData" VerticalAlignment="Top" />
+                <CheckBox Content="カスタム関連有効  )" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="145,10,0,0" Name="ctlIsOutputCutomRelation" VerticalAlignment="Top" />
+                <CheckBox Content="メモは出力しない" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="10,35,0,0" Name="ctlIsOutputMemo" VerticalAlignment="Top" />
+                <RadioButton Content="キーファイルを使用する" HorizontalAlignment="Left" Margin="10,65,0,0" Name="ctlUseKeyFile" VerticalAlignment="Top" IsChecked="True" />
+                <RadioButton Content="パッケージパスワードを使用する" HorizontalAlignment="Left" Margin="10,87,0,0" Name="ctlPackagePasswordEnable" VerticalAlignment="Top" />
+                <Label Content="パスワード：" Height="28" HorizontalAlignment="Left" Margin="27,104,0,0" VerticalAlignment="Top" />
+                <PasswordBox Height="23" IsEnabled="False" Margin="140,107,50,0" Name="ctlPackagePassword" VerticalAlignment="Top" />
+                <Label Content="パスワード再入力：" Height="28" HorizontalAlignment="Left" Margin="27,130,0,0" Name="Label3" VerticalAlignment="Top" />
+                <PasswordBox Height="23" IsEnabled="False" Margin="140,132,50,0" Name="ctlPackagePasswordConfirm" VerticalAlignment="Top" />
+                <Button Content="?" Height="23" HorizontalAlignment="Right" Margin="0,12,10,0" Name="ctlOutpuHelp" VerticalAlignment="Top" Width="34" />
+                
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="出力位置" Height="80" Margin="10,408,10,0" Name="GroupBox3" VerticalAlignment="Top" >
+            <Grid>
+                <Label Content="出力パス：" Height="28" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" />
+                <TextBox Height="23" Margin="83,18,55,0" Name="ctlOutputPath" VerticalAlignment="Top" IsReadOnly="False" />
+                <Button Content="..." Height="23" HorizontalAlignment="Right" Margin="0,18,10,0" Name="ctlOutputPathSelect" VerticalAlignment="Top" Width="47" /> 
+            </Grid>
+        </GroupBox>
+        <Button Content="取消" Height="23" HorizontalAlignment="Left" Margin="10,0,0,10" Name="ctlCancel" VerticalAlignment="Bottom" Width="75" />
+        <Button Content="保存" Height="23" HorizontalAlignment="Right" Margin="0,0,10,10" Name="ctlSave" VerticalAlignment="Bottom" Width="75" />
+    </Grid>
+</Window>

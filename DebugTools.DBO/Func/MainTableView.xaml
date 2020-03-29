@@ -1,0 +1,91 @@
+﻿<Window x:Class="DebugTools.DBO.MainTableView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="表视图" Height="600" Width="1200" WindowStartupLocation="CenterScreen" xmlns:my="clr-namespace:DebugTools.DBO"
+    Loaded="Window_Loaded" >
+    <Window.CommandBindings>
+        <CommandBinding Command="Open" Executed="SelectTable_Executed" />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Command="Open" Modifiers="Ctrl" Key="T" />
+    </Window.InputBindings>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" HorizontalAlignment="Stretch" Name="ctlMenu" VerticalAlignment="Stretch">
+            <MenuItem Header="文件" >
+                <MenuItem Name="ctlMenuOpenConnectSelect" Header="打开新连接" Click="ctlOpenConnectSelect_Click" />
+                <MenuItem Name="ctlMenuOpenTableSelect" Header="打开新表" Click="ctlOpenTableSelect_Click" />
+                <MenuItem Name="ctlMenuTableChange" Header="选择表" InputGestureText="Ctrl+X" Click="ctlMenuTableChange_Click" />
+                <MenuItem Name="ctlMenuExit" Header="退出" Click="ctlExit" />
+            </MenuItem>
+            <MenuItem Header="表示" >
+                <MenuItem Name="ctlMenuShowParentRelation" Header="显示父关联" IsCheckable="True" IsChecked="True" />
+                <MenuItem Name="ctlMenuShowParentRelationData" Header="显示父关联数据" IsCheckable="True" IsChecked="True" />
+                <MenuItem Name="ctlMenuShowSubRelation" Header="显示子关联" IsCheckable="True" IsChecked="True" />
+                <MenuItem Name="ctlMenuShowSubRelationData" Header="显示子关联数据" IsCheckable="True" IsChecked="True" />
+                <MenuItem Name="ctlMenuShowConverter" Header="值显示转换器(未完成)" IsCheckable="True"  />
+            </MenuItem>
+            <MenuItem Header="编辑" >
+            </MenuItem>
+            <MenuItem Header="数据包" >
+                <MenuItem Name="ctlMenuShowPackageCreateView" Header="导出数据包" Click="ctlMenuShowPackageCreateView_Click" />
+                <MenuItem Name="ctlMenuClearPackage" Header="清除当前所选数据包数据" />
+                <MenuItem Name="ctlMenuOpenPackage" Header="打开数据包" />
+                <MenuItem Name="ctlMenuInputPackage" Header="数据包导入DB(未完成)" />
+            </MenuItem>
+            <MenuItem Header="帮助">
+                <MenuItem Name="ctlMenuOperationHelp" Header="操作说明" />
+                <MenuItem Name="ctlMenuKeyboardHelp" Header="案件" />
+                <MenuItem Name="ctlMenuAbout" Header="版本信息" />
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="colParent" Width="0" />
+                <ColumnDefinition />
+                <ColumnDefinition x:Name="colSub" Width="0" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" >
+                    <CheckBox x:Name="ctlShowParentRelation" Content="显示父关联" Margin="5 0 0 0" IsChecked="True" />
+                    <CheckBox x:Name="ctlShowParentRelationData" Content="显示父关联数据" Margin="5 0 0 0"  IsChecked="True" />
+                </StackPanel>
+                <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled">
+                    <Grid Name="ctlParentTableList" HorizontalAlignment="Stretch" >
+
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+            <GridSplitter Grid.Column="0" Width="6" ResizeDirection="Columns" HorizontalAlignment="Right" VerticalAlignment="Stretch"></GridSplitter>
+            <Grid Name="gridMain" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <my:DataViewEx Grid.Row="0" x:Name="mainDataView" />
+            </Grid>
+            <GridSplitter Grid.Column="1" Width="6" ResizeDirection="Columns" HorizontalAlignment="Right" VerticalAlignment="Stretch"></GridSplitter>
+            <Grid Grid.Column="2" HorizontalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" >
+                    <CheckBox x:Name="ctlShowSubRelation" Content="显示子关联" Margin="5 0 0 0" IsChecked="True" />
+                    <CheckBox x:Name="ctlShowSubRelationData" Content="显示子关联数据" Margin="5 0 0 0"  IsChecked="True" />
+                </StackPanel>
+                <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled">
+                    <Grid Name="ctlSubTableList" HorizontalAlignment="Stretch" >
+
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

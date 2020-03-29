@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5DF0AFF-F296-416C-A579-9190DB30F7AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DebugTools</RootNamespace>
+    <AssemblyName>DebugTools.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase\ColumnInfo.cs" />
+    <Compile Include="DataBase\DataBaseAccessorManager.cs" />
+    <Compile Include="DataBase\SqlCondition.cs" />
+    <Compile Include="DataBase\SqlInfo.cs" />
+    <Compile Include="DataBase\TableInfo.cs" />
+    <Compile Include="DataBase\TableRelation.cs" />
+    <Compile Include="Helper\XmlHelper.cs" />
+    <Compile Include="Hook\MethodHook\AssemblyUtil.cs" />
+    <Compile Include="Hook\MethodHook\DetourFactory.cs" />
+    <Compile Include="Hook\MethodHook\DetourWays\MethodTableDetour.cs" />
+    <Compile Include="Hook\MethodHook\DetourWays\NativeDetourFor32Bit.cs" />
+    <Compile Include="Hook\MethodHook\DetourWays\NativeDetourFor64Bit.cs" />
+    <Compile Include="Hook\MethodHook\IDetour.cs" />
+    <Compile Include="Hook\MethodHook\IMethodMonitor.cs" />
+    <Compile Include="Hook\MethodHook\LDasm.cs" />
+    <Compile Include="Hook\MethodHook\Monitor.cs" />
+    <Compile Include="Hook\MethodHook\MonitorAttribute.cs" />
+    <Compile Include="Hook\MethodHook\NativeAPI.cs" />
+    <Compile Include="Hook\MethodHook\OriginalAttribute.cs" />
+    <Compile Include="Manager\ImportServiceManager.cs" />
+    <Compile Include="Manager\ViewManager.cs" />
+    <Compile Include="CommonConst.cs" />
+    <Compile Include="Manager\WriteExceptionManager.cs" />
+    <Compile Include="Net\Client\SocketClient.cs" />
+    <Compile Include="Net\Client\SocketClientProcessor.cs" />
+    <Compile Include="Net\Server\HttpProcessor.cs" />
+    <Compile Include="Net\Server\SessionManager.cs" />
+    <Compile Include="Net\Server\SocketServerProcessor.cs" />
+    <Compile Include="Warpper\API\APIPointer.cs" />
+    <Compile Include="Warpper\API\ComRect.cs" />
+    <Compile Include="Warpper\API\WinAPIWarpper.cs" />
+    <Compile Include="Manager\ClassManager.cs" />
+    <Compile Include="Config\SettingFile\BaseNode.cs" />
+    <Compile Include="Config\SettingFile\ConnectionItemNode.cs" />
+    <Compile Include="Config\SettingForm\ConnectionSettingArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config\SettingForm\ConnectionSettingArea.Designer.cs">
+      <DependentUpon>ConnectionSettingArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\SettingForm\MainConfigFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\SettingForm\MainConfigFrm.Designer.cs">
+      <DependentUpon>MainConfigFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\FileSystemHelper.cs" />
+    <Compile Include="Helper\MenuHelper.cs" />
+    <Compile Include="Hook\ExceptionHook\ExceptionViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Hook\ExceptionHook\ExceptionViewer.Designer.cs">
+      <DependentUpon>ExceptionViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hook\ExceptionHook\ExceptionViewWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hook\ExceptionHook\ExceptionViewWindow.Designer.cs">
+      <DependentUpon>ExceptionViewWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ExecptionExporter.cs" />
+    <Compile Include="Helper\ColorHelper.cs" />
+    <Compile Include="Helper\TypeHelper.cs" />
+    <Compile Include="Hook\FrameworkVersions.cs" />
+    <Compile Include="Hook\InterfaceMock\InterfaceMockCreator.cs" />
+    <Compile Include="Hook\MethodUtil.cs" />
+    <Compile Include="BaseApplication.cs" />
+    <Compile Include="Manager\ConfigManager.cs" />
+    <Compile Include="Manager\ExceptionManager.cs" />
+    <Compile Include="Manager\ExportServiceManager.cs" />
+    <Compile Include="Manager\LogManager.cs" />
+    <Compile Include="Manager\ManagerCreator.cs" />
+    <Compile Include="Manager\MenuManager.cs" />
+    <Compile Include="Manager\PathManager.cs" />
+    <Compile Include="Manager\PluginInformation.cs" />
+    <Compile Include="Manager\PluginManager.cs" />
+    <Compile Include="Service\ExecuteResult.cs" />
+    <Compile Include="Net\Server\SocketServer.cs" />
+    <Compile Include="Viewer\CodeViewer\CodeViewerFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\CodeViewer\CodeViewerFrame.Designer.cs">
+      <DependentUpon>CodeViewerFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\CodeViewer\DefaultCodeViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\CodeViewer\DefaultCodeViewer.Designer.cs">
+      <DependentUpon>DefaultCodeViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\ObjectViewer\PowerClassViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\ObjectViewer\PowerClassViewer.Designer.cs">
+      <DependentUpon>PowerClassViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\ObjectViewer\DefaultClassViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\ObjectViewer\DefaultClassViewer.Designer.cs">
+      <DependentUpon>DefaultClassViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\ObjectViewer\ObjectViewerFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\ObjectViewer\ObjectViewerFrame.Designer.cs">
+      <DependentUpon>ObjectViewerFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\ObjectViewer\ObjectViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\ObjectViewer\ObjectViewer.Designer.cs">
+      <DependentUpon>ObjectViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceManager.cs" />
+    <Compile Include="Helper\AssemblyHelper.cs" />
+    <Compile Include="Warpper\CommonWarpperObject.cs" />
+    <Compile Include="Warpper\ComProgId.cs" />
+    <Compile Include="Warpper\DictionaryWarpper.cs" />
+    <Compile Include="Warpper\EventHandlerWarpper.cs" />
+    <Compile Include="Warpper\ICollectionWarpper.cs" />
+    <Compile Include="Warpper\IEnumerableWarpper.cs" />
+    <Compile Include="Warpper\IEnumeratorWarpper.cs" />
+    <Compile Include="Warpper\IListWarpper.cs" />
+    <Compile Include="Warpper\KeyValuePairWarpper.cs" />
+    <Compile Include="Warpper\ListWarpper.cs" />
+    <Compile Include="Warpper\TupleWarpper.cs" />
+    <Compile Include="Warpper\WarpperCreator.cs" />
+    <Compile Include="Warpper\WarpperObject.cs" />
+    <Compile Include="Warpper\WarpperTargetType.cs" />
+    <Compile Include="Window\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PathChangedEventArgs.cs" />
+    <Compile Include="Window\SelectPathControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Window\SelectPathControl.Designer.cs">
+      <DependentUpon>SelectPathControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlFile\CXmlFile.cs" />
+    <Compile Include="XmlFile\CXmlNode.cs" />
+    <Compile Include="Helper\ImageHelper.cs" />
+    <Compile Include="Helper\NumericHelper.cs" />
+    <Compile Include="Convert\ObjectConvert.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helper\RegistryHelper.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Warpper\ComWarpperObject.cs" />
+    <Compile Include="XmlFile\CXmlNodeList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\SettingForm\ConnectionSettingArea.resx">
+      <DependentUpon>ConnectionSettingArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\SettingForm\MainConfigFrm.resx">
+      <DependentUpon>MainConfigFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hook\ExceptionHook\ExceptionViewer.resx">
+      <DependentUpon>ExceptionViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hook\ExceptionHook\ExceptionViewWindow.resx">
+      <DependentUpon>ExceptionViewWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\CodeViewer\CodeViewerFrame.resx">
+      <DependentUpon>CodeViewerFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\CodeViewer\DefaultCodeViewer.resx">
+      <DependentUpon>DefaultCodeViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ObjectViewer\DefaultClassViewer.resx">
+      <DependentUpon>DefaultClassViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ObjectViewer\ObjectViewerFrame.resx">
+      <DependentUpon>ObjectViewerFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ObjectViewer\PowerClassViewer.resx">
+      <DependentUpon>PowerClassViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ObjectViewer\ObjectViewer.resx">
+      <DependentUpon>ObjectViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\SelectPathControl.resx">
+      <DependentUpon>SelectPathControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hook\LogHook\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DebugTools.Interface\DebugTools.Interface.csproj">
+      <Project>{57BC8F9C-21BE-4E6E-ADB6-1C058823F920}</Project>
+      <Name>DebugTools.Interface</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

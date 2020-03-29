@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="DebugTools.DBO.DataWhereView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <StackPanel Margin="2" Orientation="Horizontal" >
+        <TextBlock Name="ctlKeyType" MinWidth="50" Width="Auto" VerticalAlignment="Center" Foreground="Blue"></TextBlock>
+        <TextBlock Name="ctlName" MinWidth="200" Width="Auto" VerticalAlignment="Center" Foreground="Blue">Name</TextBlock>
+        <TextBlock Name="ctlType" Margin="5,0,0,0" MinWidth="100" Width="Auto" VerticalAlignment="Center">Type</TextBlock>
+        <ComboBox Name="ctlOperater" VerticalAlignment="Center" Width="45" >
+            <ComboBoxItem Content="like" />
+            <ComboBoxItem Content="=" />
+            <ComboBoxItem Content="in" />
+            <ComboBoxItem Content=">" />
+            <ComboBoxItem Content=">=" />
+            <ComboBoxItem Content="&lt;" />
+            <ComboBoxItem Content="&lt;=" />
+            <ComboBoxItem Content="&lt;&gt;" />
+        </ComboBox>
+        <TextBox Margin="5,0,0,0" Name="ctlValue" VerticalAlignment="Center" Width="200" ></TextBox>
+        <CheckBox Margin="5,0,0,0" Name="ctlRaw" VerticalAlignment="Center" Content="Raw" ToolTip="直接将文本框中的内容代入查询"/>
+        <CheckBox Margin="5,0,0,0" Name="ctlNull" VerticalAlignment="Center" Content="Null"/>
+        <CheckBox Margin="5,0,0,0" Name="ctlNotNull" VerticalAlignment="Center" Content="Not Null"/> 
+    </StackPanel>
+</UserControl>

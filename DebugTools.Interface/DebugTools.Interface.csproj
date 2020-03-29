@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57BC8F9C-21BE-4E6E-ADB6-1C058823F920}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DebugTools</RootNamespace>
+    <AssemblyName>DebugTools.Interface</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Check\ICheckResult.cs" />
+    <Compile Include="Check\IRepairResult.cs" />
+    <Compile Include="Check\IRepair.cs" />
+    <Compile Include="Common\AppMode.cs" />
+    <Compile Include="Check\IChecker.cs" />
+    <Compile Include="Common\Xml\IXmlSerializable.cs" />
+    <Compile Include="Common\Xml\XmlConfigInfo.cs" />
+    <Compile Include="Const\ClassCategoryConst.cs" />
+    <Compile Include="Const\ClassKeyConst.cs" />
+    <Compile Include="Const\CommandConst.cs" />
+    <Compile Include="DataBase\DBConnectInfo.cs" />
+    <Compile Include="DataBase\IColumnInfo.cs" />
+    <Compile Include="DataBase\IConnectionSetting.cs" />
+    <Compile Include="DataBase\IDataAccessor.cs" />
+    <Compile Include="DataBase\IDataAccessorFactory.cs" />
+    <Compile Include="DataBase\IDataAccessorManager.cs" />
+    <Compile Include="DataBase\IDBAccessor.cs" />
+    <Compile Include="DataBase\InfoType.cs" />
+    <Compile Include="DataBase\ISqlStyle.cs" />
+    <Compile Include="DataBase\ISqlCondition.cs" />
+    <Compile Include="DataBase\ITableInfo.cs" />
+    <Compile Include="DataBase\ITableList.cs" />
+    <Compile Include="DataBase\ITableRelationInfo.cs" />
+    <Compile Include="Information\ClassInformation.cs" />
+    <Compile Include="Information\ClassInformationDictionary.cs" />
+    <Compile Include="Information\ConfigInformation.cs" />
+    <Compile Include="DataBase\IDataBaseConfig.cs" />
+    <Compile Include="Information\DMessage.cs" />
+    <Compile Include="Information\ExceptionInformation.cs" />
+    <Compile Include="Common\IApplication.cs" />
+    <Compile Include="Information\CodeInfo.cs" />
+    <Compile Include="Information\Instance.cs" />
+    <Compile Include="Information\InstanceDictionary.cs" />
+    <Compile Include="Information\ListMap.cs" />
+    <Compile Include="Information\Message.cs" />
+    <Compile Include="Information\Progress.cs" />
+    <Compile Include="Information\ResultInfo.cs" />
+    <Compile Include="Information\TreeMap.cs" />
+    <Compile Include="Manager\IClassManager.cs" />
+    <Compile Include="Manager\IDBManager.cs" />
+    <Compile Include="Manager\IViewManager.cs" />
+    <Compile Include="Net\ISocketClient.cs" />
+    <Compile Include="Net\ISocketClientProcessor.cs" />
+    <Compile Include="Net\ISocketServerProcessor.cs" />
+    <Compile Include="Net\ISocketServer.cs" />
+    <Compile Include="Net\SocketMessage.cs" />
+    <Compile Include="Net\SocketSession.cs" />
+    <Compile Include="Package\IBlockInfo.cs" />
+    <Compile Include="Package\IPackageExporter.cs" />
+    <Compile Include="Package\PackageExportOption.cs" />
+    <Compile Include="SystemCenter.cs" />
+    <Compile Include="Viewer\ICodeViewer.cs" />
+    <Compile Include="Manager\IConfigManager.cs" />
+    <Compile Include="Common\IDummyObject.cs" />
+    <Compile Include="Manager\IExceptionManager.cs" />
+    <Compile Include="Information\IExecuteResult.cs" />
+    <Compile Include="Common\IExporter.cs" />
+    <Compile Include="Manager\ILogManager.cs" />
+    <Compile Include="Manager\IManagerCreator.cs" />
+    <Compile Include="Manager\IMenuManager.cs" />
+    <Compile Include="Information\IMessage.cs" />
+    <Compile Include="Common\Xml\IXmlEditControl.cs" />
+    <Compile Include="Common\Xml\IXmlFile.cs" />
+    <Compile Include="Common\Xml\IXmlNode.cs" />
+    <Compile Include="Information\LogBlock.cs" />
+    <Compile Include="Information\MenuItemInfo.cs" />
+    <Compile Include="Information\ObjectInfo.cs" />
+    <Compile Include="Viewer\IView.cs" />
+    <Compile Include="Viewer\IObjectViewer.cs" />
+    <Compile Include="Common\IPluginEntry.cs" />
+    <Compile Include="Manager\IServicesManager.cs" />
+    <Compile Include="Manager\IPathManager.cs" />
+    <Compile Include="Common\PluginEntryAttribute.cs" />
+    <Compile Include="Manager\IPluginManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Viewer\IViewContainer.cs" />
+    <Compile Include="Viewer\IViewCreator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Secret\ISecretService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Secret\SecretType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Secret\SecretMode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Package\PackageInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

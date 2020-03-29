@@ -1,0 +1,15 @@
+﻿<Grid Margin="10"  x:Class="DebugTools.DBO.DataView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid.RowDefinitions>
+        <RowDefinition Height="20" />
+        <RowDefinition Height="20" />
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <TextBlock x:Name="ctlRelationName" Grid.Row="0" VerticalAlignment="Center" Foreground="Blue" >Name</TextBlock>
+    <TextBlock x:Name="ctlTableName" Grid.Row="1" VerticalAlignment="Center" Foreground="Blue" >Name</TextBlock>
+    <DataGrid x:Name="ctlDataGrid" Grid.Row="2" ItemsSource="{Binding }" CanUserAddRows="False"  ></DataGrid>
+</Grid>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Connections>
+    <Connection Key="KANEKA" Name="Kaneka" ConnectionString="DATA SOURCE=CORED01;PASSWORD=TEST4_PWD;PERSIST SECURITY INFO=True;USER ID=TEST4" Defualt="1" />
+  </Connections>  
+</root>

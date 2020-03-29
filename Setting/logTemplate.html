@@ -1,0 +1,75 @@
+<HTML charset="utf-8" >
+	<style type="text/css" >
+ 
+		/*FINEST VERBOSE*/
+		.level10000Style{
+			color:Red; 
+		}
+		/*FINER TRACE*/
+		.level20000Style{
+			color:Black;
+		}
+		/*FINE DEBUG*/
+		.level30000Style{
+			color:black;
+		}
+		/*RINFO*/
+		.level35000Style{
+			color:black;
+		}
+		/*INFO*/
+		.level40000Style{
+			color:Blue;
+		}
+		/*ERROR*/
+		.level40000Style{
+			color:Blue;
+		}
+		/*NOTICE*/
+		.level50000Style{
+			color:Blue;
+		}
+		/*WARN*/
+		.level60000Style{
+			color:Orange;
+		}
+		/*ERROR*/
+		.level70000Style{
+			color:Red;
+		} 
+		/*SEVERE*/
+		.level80000Style{
+			color:Black;
+		}
+		/*CRITICAL*/
+		.level90000Style{
+			color:Black;
+		}
+		/*ALERT*/
+		.level100000Style{
+			color:Orange;
+		}
+		/*FATAL*/
+		.level110000Style{
+			color:Black;
+		}
+		/*EMERGENCY*/
+		.level200000Style{
+			color:Black;
+		}
+		 
+	</style>
+    <Body>
+        <div id='ErrorList' />
+    </Body>
+    <Script> 
+        function AddLog(logInfo,level){
+			var div=document.createElement("div");  
+			div.className = "level" + level + "Style";  
+			div.innerHTML= logInfo;
+			ErrorList.appendChild(div); 
+			ErrorList.scrollIntoView(false);
+			
+        }  
+    </Script>
+</HTML>

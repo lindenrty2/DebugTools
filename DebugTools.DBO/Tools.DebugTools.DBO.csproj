@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B6D275B-BF99-479F-89D8-A7C16A8F54C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DebugTools.DBO</RootNamespace>
+    <AssemblyName>Tools.DebugTools.DBO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <MyType>Custom</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>true</IncrementalBuild>
+    <OutputPath>..\Output\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>false</IncrementalBuild>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DocumentationFile>Tools.DebugTools.DBO.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>Application</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.16\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Application.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Config\ConfigCenter.cs" />
+    <Compile Include="Config\EditConnect.xaml.cs">
+      <DependentUpon>EditConnect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Func\DataPackageCreateOptionWindow.xaml.cs">
+      <DependentUpon>DataPackageCreateOptionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Func\DataViewEx.xaml.cs">
+      <DependentUpon>DataViewEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Package\PackageBlockType.cs" />
+    <Compile Include="Secret\RSASecretService.cs" />
+    <Compile Include="Package\PackageBlockInfo.cs" />
+    <Compile Include="Package\PackageSerializable.cs" />
+    <Compile Include="Package\PackageFile.cs" />
+    <Compile Include="Package\PackageData.cs" />
+    <Compile Include="Package\PackageTableInfo.cs" />
+    <Compile Include="Package\PackageVersionAttribute.cs" />
+    <Compile Include="Exporter\PackageExportContainer.cs" />
+    <Compile Include="Exporter\PackageExporter.cs" />
+    <Compile Include="Exporter\PackageEventArgs.cs" />
+    <Compile Include="Func\ColumnSettingEditor.xaml.cs">
+      <DependentUpon>ColumnSettingEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Func\DataPackageCreateWindow.xaml.cs">
+      <DependentUpon>DataPackageCreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Func\DataWhereView.xaml.cs">
+      <DependentUpon>DataWhereView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Config\SelectConnect.xaml.cs">
+      <DependentUpon>SelectConnect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Func\SelectTableWindow.xaml.cs">
+      <DependentUpon>SelectTableWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Func\DataView.xaml.cs">
+      <DependentUpon>DataView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Package\PackageHeader.cs" />
+    <Compile Include="Package\PackageMate.cs" />
+    <Compile Include="Package\PackageViewInfo.cs" />
+    <Compile Include="Secret\SecretServiceCenter.cs" />
+    <Page Include="Config\EditConnect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\ColumnSettingEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\DataPackageCreateOptionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\DataPackageCreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\DataViewEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\DataWhereView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\MainTableView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Application.xaml.cs">
+      <DependentUpon>Application.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Func\MainTableView.xaml.cs">
+      <DependentUpon>MainTableView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Config\SelectConnect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\SelectTableWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\DataView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Func\TableRelationItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\TableRelationSettingEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\TableSettingEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Func\ConditionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Data" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Shapes" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
+    <Import Include="System.Windows.Navigation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Func\TableRelationItemView.xaml.cs">
+      <DependentUpon>TableRelationItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Func\TableRelationSettingEditor.xaml.cs">
+      <DependentUpon>TableRelationSettingEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Func\TableSettingEditor.xaml.cs">
+      <DependentUpon>TableSettingEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Func\ConditionView.xaml.cs">
+      <DependentUpon>ConditionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <AppDesigner Include="My Project\" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DebugTools.Common\DebugTools.Common.csproj">
+      <Project>{D5DF0AFF-F296-416C-A579-9190DB30F7AE}</Project>
+      <Name>DebugTools.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DebugTools.Interface\DebugTools.Interface.csproj">
+      <Project>{57BC8F9C-21BE-4E6E-ADB6-1C058823F920}</Project>
+      <Name>DebugTools.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accessor\AccessorCenter.cs" />
+    <Compile Include="Accessor\PackageDataAccessor.cs" />
+    <Compile Include="Common\ConvertHelper.cs" />
+    <Compile Include="Common\CustomDataGridTextColumn.cs" />
+    <Compile Include="Common\PathHelper.cs" />
+    <Compile Include="Common\XmlSerializeHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
