@@ -27,7 +27,7 @@ namespace HttpProxyServer
             this.pgRequest.SelectedObject = this._record.Request;
             this.txtRequestBody.Text = this._record.Request.StringBody;
             this.pgResponse.SelectedObject = this._record.ProxyResponse;
-            this.txtResponseBody.Text = this._record.ProxyResponse.StringBody;
+            this.txtResponseBody.Text = this._record.ProxyResponse == null ? "" : this._record.ProxyResponse.StringBody;
         }
 
         private void bnClose_Click(object sender, EventArgs e)

@@ -140,7 +140,7 @@ namespace HttpProxyServer
         {
             if (record.Control == null) return;
             ListViewItem item = (ListViewItem)record.Control;
-            item.SubItems[1].Text = record.ProxyResponse.ContentType;
+            item.SubItems[1].Text = record.ProxyResponse == null ? "" : record.ProxyResponse.ContentType;
             item.SubItems[3].Text = record.StatusText;
         }
 

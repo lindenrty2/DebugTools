@@ -122,7 +122,15 @@ namespace HttpProxyServer
             {
                 record.SaveCache();
             }
-
+            if(record.ProxyResponse == null)
+            {
+                record.IsComplated = true;
+                if (OnProxyFinished != null)
+                {
+                    OnProxyFinished(record);
+                }
+                return;
+            }
             record.ProxyResponse.CopyHeaderTo(response);
 
             if (response.ContentLength64 > 0)
