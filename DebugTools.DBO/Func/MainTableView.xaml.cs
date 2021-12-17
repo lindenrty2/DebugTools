@@ -68,7 +68,7 @@ namespace DebugTools.DBO
                 SelectConnect();
             if (_dataAccessor == null)
                 return;
-            this.Title = string.Format("データビュー：【{0}】", _dataAccessor.DisplayName);
+            this.Title = string.Format("DataViewer：【{0}】", _dataAccessor.DisplayName);
             if (mainDataView.TargetInfo == null)
                 SelectTable();
             else

@@ -20,9 +20,12 @@ using System.Windows;
 
 public partial class Application
 {
+    MainApplication _innerApp = new MainApplication();
     public Application()
     {
-        new MainApplication();
+        _innerApp = new MainApplication();
+        _innerApp.Init();
+        _innerApp.PluginManager.LoadAll();
     }
 
     public static int GetPackageVersionNo()

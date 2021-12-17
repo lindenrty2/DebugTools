@@ -24,7 +24,8 @@ namespace DebugTools.DataBase
 
         public IDataAccessor Create(DBConnectInfo info)
         {
-            return _accessorMap[info.Type].Create(info);
+            IDataAccessorFactory factory = _app.ClassManager.GetInstance<IDataAccessorFactory>(Const.ClassCategoryConst.DBACCESSOR, info.Type);
+            return factory.Create(info);
         }
 
         public void Regist<Factory>() where Factory : IDataAccessorFactory

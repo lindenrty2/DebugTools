@@ -31,7 +31,7 @@ namespace DebugTools.Common.DBSupport.SQLServer
         public bool Connection(IApplication app)
         {
             _app = app;
-            //_app.ClassManager.Regist(Const.ClassCategoryConst.DBACCESSOR ,"2", typeof(OracleDBAccessor));
+            _app.ClassManager.Regist(Const.ClassCategoryConst.DBACCESSOR ,"SqlServer", typeof(SQLServerAccessorFactory));
             return true;
         }
          

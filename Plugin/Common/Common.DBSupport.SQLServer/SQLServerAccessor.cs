@@ -69,7 +69,7 @@ namespace DebugTools.Common.DBSupport.SQLServer
 
         public ITableList GetTables(string dbName = null)
         {
-            string sql = "SELECT T.NAME,EP.VALUE AS COMMENT,T.OBJECT_ID AS ID FROM SYS.TABLES AS T LEFT JOIN SYS.EXTENDED_PROPERTIES AS EP ON T.OBJECT_ID = EP.MAJOR_ID AND EP.name='MS_Description' AND EP.MINOR_ID=0 ORDER BY T.NAME";
+            string sql = "SELECT '" + dbName + "' AS DBNAME,T.NAME,EP.VALUE AS COMMENT,T.OBJECT_ID AS ID FROM SYS.TABLES AS T LEFT JOIN SYS.EXTENDED_PROPERTIES AS EP ON T.OBJECT_ID = EP.MAJOR_ID AND EP.name='MS_Description' AND EP.MINOR_ID=0 ORDER BY T.NAME";
 
             DataSet dataset = ExecDataSet(sql);
             if (dataset == null || dataset.Tables.Count == 0)
@@ -83,7 +83,7 @@ namespace DebugTools.Common.DBSupport.SQLServer
         {
             if (_tableInfoCacheList.ContainsKey(tableName))
                 return _tableInfoCacheList[tableName];
-            string sql = string.Format("SELECT '' AS DBNAME T.NAME,EP.VALUE AS COMMENT,T.OBJECT_ID AS ID FROM SYS.TABLES AS T LEFT JOIN SYS.EXTENDED_PROPERTIES AS EP ON T.OBJECT_ID = EP.MAJOR_ID AND EP.name='MS_Description' AND EP.MINOR_ID=0 AND T.NAME='{0}' ORDER BY T.NAME", tableName);
+            string sql = string.Format("SELECT '" + dbName + "' AS DBNAME,T.NAME,EP.VALUE AS COMMENT,T.OBJECT_ID AS ID FROM SYS.TABLES AS T LEFT JOIN SYS.EXTENDED_PROPERTIES AS EP ON T.OBJECT_ID = EP.MAJOR_ID AND EP.name='MS_Description' AND EP.MINOR_ID=0 AND T.NAME='{0}' ORDER BY T.NAME", tableName);
 
             DataSet dataset = ExecDataSet(sql);
             if (dataset == null || dataset.Tables.Count == 0)
@@ -199,7 +199,7 @@ namespace DebugTools.Common.DBSupport.SQLServer
 
         public IEnumerable<ITableRelationInfo> GetTableRelation(ITableInfo tableInfo)
         {
-            string sql = string.Format("SELECT A.NAME AS FKNAME,B.NAME AS SOURCENAME,C.NAME AS TARGETNAME,A.OBJECT_ID AS FKID FROM SYS.TABLES AS C,SYS.TABLES AS B,SYS.foreign_keys AS A WHERE B.OBJECT_ID = A.REFERENCED_OBJECT_ID AND C.OBJECT_ID = A.PARENT_OBJECT_ID AND (A.PARENT_OBJECT_ID={0} OR A.REFERENCED_OBJECT_ID={0})", tableInfo.Id);
+            string sql = string.Format("SELECT '" + tableInfo.DBName + "' AS FKDBName, A.NAME AS FKNAME,'' AS SOURCEDBNAME, B.NAME AS SOURCENAME,'' AS TARGETDBNAME, C.NAME AS TARGETNAME,A.OBJECT_ID AS FKID FROM SYS.TABLES AS C,SYS.TABLES AS B,SYS.foreign_keys AS A WHERE B.OBJECT_ID = A.REFERENCED_OBJECT_ID AND C.OBJECT_ID = A.PARENT_OBJECT_ID AND (A.PARENT_OBJECT_ID={0} OR A.REFERENCED_OBJECT_ID={0})", tableInfo.Id);
             DataSet dataset = ExecDataSet(sql);
             List<ITableRelationInfo> tableRelations = new List<ITableRelationInfo>();
             if (dataset == null || dataset.Tables.Count == 0)

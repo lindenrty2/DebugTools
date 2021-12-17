@@ -30,7 +30,7 @@ namespace DebugTools.Common.Manager
         public void LoadAll()
         {
             
-            string[] files = Directory.GetFiles(_app.PathManager.GetRootPath("Plugin"));
+            string[] files = Directory.GetFiles(_app.PathManager.GetRootPath("Plugins"));
             foreach (string file in files)
             {
                 if (!file.ToUpper().EndsWith(".DLL"))
